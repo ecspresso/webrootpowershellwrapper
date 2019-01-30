@@ -194,7 +194,7 @@ function New-WebrootAccessToken {
 function Show-WebrootRefreshToken {
     param(
         [string]$token_path = "$($env:USERPROFILE)\Webroot",
-        [string]$tokens_file = 'webroottoken.psd1'
+        [string]$tokens_file = 'webroottoken.psd1',
         [switch]$renew
     )
 
@@ -218,7 +218,7 @@ function Show-WebrootRefreshToken {
 function Show-WebrootAccessToken {
     param(
         [string]$token_path = "$($env:USERPROFILE)\Webroot",
-        [string]$tokens_file = 'webroottoken.psd1'
+        [string]$tokens_file = 'webroottoken.psd1',
         [switch]$renew
     )
 
