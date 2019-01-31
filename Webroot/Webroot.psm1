@@ -238,3 +238,19 @@ function Show-WebrootAccessToken {
 
     return [PSCredential]::New('null', $($tokens.access_token.token | ConvertTo-SecureString)).GetNetworkCredential().Password
 }
+
+function Show-WebrootGSMKey {
+    param(
+        [string]$config_path = "$($env:USERPROFILE)\Webroot",
+        [string]$config_file = 'webrootconfig.psd1'
+    )
+    # Removing trailing backslash
+    if($config_path.EndsWith("\")) {
+        $config_path = $config_path.Remove($config_path.Length -1, 1)
+    }
+
+    # Import config data
+    $config = Import-PowerShellDataFile -Path "$config_path\$config_file"
+
+    return [PSCredential]::New('null', $($config.accountid | ConvertTo-SecureString)).GetNetworkCredential().Password
+}

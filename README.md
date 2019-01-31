@@ -10,3 +10,4 @@ Copy Webroot and its content to %username%\Documents\WindowsPowerShell\Modules.
 |`New-WebrootAccessToken`|Renew access token. Will call `New-WebrootRefreshToken` if expired|
 |`Show-WebrootRefreshToken`|Reveals refresh token|
 |`Show-WebrootAccessToken`|Reveals acccess token|
+|`Show-WebrootGSMKey`|Reveals GSM key|
